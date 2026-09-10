@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Константин Кульков — психолог, Гештальт-терапевт</title>
+<meta name="description" content="Константин Кульков — психолог, Гештальт-терапевт. Индивидуальное консультирование взрослых очно и онлайн. 16 лет практики, более 1000 часов дополнительного образования.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #2c3e35;
+    line-height: 1.7;
+    background: #faf8f4;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* Шапка */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,244,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e8e2d8;
+  }
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 72px;
+  }
+  .logo { font-weight: 700; font-size: 19px; letter-spacing: 0.02em; color: #2c3e35; }
+  .logo span { color: #7a9b76; }
+  .nav-links { display: none; }
+  @media (min-width: 1000px) { .nav-links { display: block; } }
+  nav a {
+    color: #2c3e35; text-decoration: none; margin-left: 20px;
+    font-size: 14px; font-family: -apple-system, sans-serif;
+  }
+  nav a:hover { color: #7a9b76; }
+
+  /* Герой */
+  .hero {
+    padding: 100px 0 90px;
+    background: linear-gradient(165deg, #eef2ec 0%, #faf8f4 65%);
+  }
+  .hero-inner {
+    display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;
+  }
+  @media (min-width: 820px) {
+    .hero-inner { grid-template-columns: 1.15fr 0.85fr; gap: 64px; }
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15; letter-spacing: -0.01em;
+    margin-bottom: 24px; font-weight: 400;
+  }
+  .hero h1 em { font-style: italic; color: #7a9b76; }
+  .hero p {
+    font-size: clamp(16px, 2vw, 19px); color: #5a6b60;
+    max-width: 560px; margin-bottom: 36px;
+    font-family: -apple-system, sans-serif;
+  }
+  .btn {
+    display: inline-block;
+    background: #7a9b76; color: #fff;
+    padding: 16px 36px; border-radius: 40px;
+    text-decoration: none; font-weight: 600; font-size: 16px;
+    font-family: -apple-system, sans-serif;
+    border: none; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(122,155,118,.35); }
+  .btn-ghost {
+    background: transparent; color: #7a9b76;
+    border: 2px solid #7a9b76; margin-left: 12px;
+  }
+  .btn-ghost:hover { box-shadow: none; background: #eef2ec; }
+  .hero-photo {
+    aspect-ratio: 4/5;
+    background: linear-gradient(160deg, #d9e4d5 0%, #c4d6c0 100%);
+    border-radius: 200px 200px 24px 24px;
+    display: flex; align-items: center; justify-content: center;
+    color: #7a9b76; font-size: 15px; text-align: center; padding: 24px;
+    font-family: -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .hero-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 200px 200px 24px 24px;
+  }
+
+  /* Секции */
+  section { padding: 88px 0; }
+  h2 {
+    font-size: clamp(26px, 3.8vw, 40px);
+    text-align: center; margin-bottom: 16px;
+    letter-spacing: -0.01em; font-weight: 400;
+  }
+  .subtitle {
+    text-align: center; color: #7a857e; margin-bottom: 56px;
+    font-family: -apple-system, sans-serif; font-size: 16px;
+  }
+
+  /* Обо мне */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr; gap: 40px;
+  }
+  @media (min-width: 820px) {
+    .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
+  }
+  .about-text p { margin-bottom: 20px; font-size: 17px; color: #3d4a42; }
+  .about-quote {
+    margin: 32px 0;
+    padding: 24px 28px;
+    background: #fff;
+    border-left: 3px solid #7a9b76;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #4a5a50;
+    font-size: 16px;
+  }
+  .about-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .about-photos div {
+    aspect-ratio: 1;
+    background: linear-gradient(160deg, #eef2ec 0%, #d9e4d5 100%);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    color: #7a9b76; font-size: 13px; text-align: center; padding: 12px;
+    font-family: -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .about-photos img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 16px;
+  }
+  .about-facts {
+    background: #fff; border-radius: 24px; padding: 40px 36px;
+    border: 1px solid #e8e2d8;
+  }
+  .about-facts h3 {
+    font-size: 15px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: #7a9b76; margin-bottom: 24px; font-weight: 600;
+    font-family: -apple-system, sans-serif;
+  }
+  .fact { display: flex; gap: 16px; margin-bottom: 22px; }
+  .fact:last-child { margin-bottom: 0; }
+  .fact-icon {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: 12px;
+    background: #eef2ec; display: flex; align-items: center;
+    justify-content: center; font-size: 18px;
+  }
+  .fact-text { font-size: 15px; color: #3d4a42; font-family: -apple-system, sans-serif; }
+  .fact-text strong { display: block; font-size: 16px; margin-bottom: 3px; color: #2c3e35; }
+
+  /* Как я работаю */
+  .how { background: #f3f0ea; }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .how-item {
+    background: #fff; border-radius: 18px; padding: 32px 30px;
+    border: 1px solid #e8e2d8;
+  }
+  .how-item h3 {
+    font-size: 19px; margin-bottom: 12px; font-weight: 400;
+    color: #2c3e35;
+  }
+  .how-item p { color: #5a6b60; font-size: 15px; font-family: -apple-system, sans-serif; }
+
+  /* Принципы */
+  .principles { background: #fff; }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  @media (min-width: 720px) {
+    .principles-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .principle {
+    padding: 28px 32px;
+    background: #faf8f4;
+    border-radius: 18px;
+    border: 1px solid #e8e2d8;
+  }
+  .principle h3 {
+    font-size: 18px; margin-bottom: 10px; font-weight: 400;
+    color: #2c3e35;
+  }
+  .principle p { color: #5a6b60; font-size: 15px; font-family: -apple-system, sans-serif; }
+
+  /* Формат */
+  .format { background: #f3f0ea; }
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px; max-width: 900px; margin: 0 auto;
+  }
+  .format-item {
+    text-align: center; padding: 32px 24px;
+    background: #fff; border-radius: 18px;
+    border: 1px solid #e8e2d8;
+  }
+  .format-icon {
+    font-size: 28px; margin-bottom: 14px; display: block;
+  }
+  .format-item h3 {
+    font-size: 17px; margin-bottom: 8px; font-weight: 400;
+  }
+  .format-item p { color: #5a6b60; font-size: 14px; font-family: -apple-system, sans-serif; }
+
+  /* Карьера */
+  .career { background: #fff; }
+  .timeline {
+    max-width: 780px; margin: 0 auto;
+    position: relative; padding-left: 32px;
+  }
+  .timeline::before {
+    content: ""; position: absolute; left: 8px; top: 8px; bottom: 8px;
+    width: 2px; background: #c4d6c0;
+  }
+  .timeline-item { position: relative; margin-bottom: 40px; }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: ""; position: absolute; left: -32px; top: 6px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: #fff; border: 3px solid #7a9b76;
+  }
+  .timeline-item.active::before {
+    background: #7a9b76; box-shadow: 0 0 0 5px rgba(122,155,118,.2);
+  }
+  .timeline-years {
+    font-size: 13px; color: #7a9b76; letter-spacing: 0.08em;
+    font-weight: 600; margin-bottom: 6px;
+    font-family: -apple-system, sans-serif;
+  }
+  .timeline-item h3 {
+    font-size: 20px; margin-bottom: 4px; font-weight: 400; color: #2c3e35;
+  }
+  .timeline-place {
+    font-size: 14px; color: #7a857e; margin-bottom: 8px;
+    font-family: -apple-system, sans-serif; font-style: italic;
+  }
+  .timeline-role {
+    font-size: 15px; color: #3d4a42; font-family: -apple-system, sans-serif;
+  }
+
+  /* С чем работаю */
+  .services { background: #f3f0ea; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .card {
+    background: #fff; border-radius: 20px; padding: 36px 32px;
+    border: 1px solid #e8e2d8;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(60,80,60,.08); }
+  .card-num {
+    font-size: 13px; color: #7a9b76; letter-spacing: 0.12em;
+    font-weight: 600; margin-bottom: 20px; font-family: -apple-system, sans-serif;
+  }
+  .card h3 { font-size: 21px; margin-bottom: 14px; font-weight: 400; }
+  .card p { color: #5a6b60; font-size: 15px; font-family: -apple-system, sans-serif; }
+
+  /* Блог */
+  .blog { background: #fff; }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .blog-card {
+    background: #faf8f4; border-radius: 20px; overflow: hidden;
+    border: 1px solid #e8e2d8;
+    transition: box-shadow .2s, transform .2s;
+    text-decoration: none; color: inherit;
+    display: block;
+  }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(60,80,60,.1); }
+  .blog-card-body { padding: 28px 28px 32px; }
+  .blog-tag {
+    font-size: 12px; color: #7a9b76; letter-spacing: 0.1em;
+    font-weight: 600; margin-bottom: 12px;
+    font-family: -apple-system, sans-serif; text-transform: uppercase;
+  }
+  .blog-card h3 {
+    font-size: 19px; margin-bottom: 12px; font-weight: 400;
+    line-height: 1.35;
+  }
+  .blog-card p {
+    color: #5a6b60; font-size: 14px;
+    font-family: -apple-system, sans-serif;
+  }
+  .blog-more {
+    text-align: center; margin-top: 48px;
+  }
+
+  /* Образование */
+  .education { background: #f3f0ea; }
+  .edu-summary {
+    max-width: 860px; margin: 0 auto 48px;
+    background: #fff; border-radius: 20px;
+    padding: 36px 40px;
+    border: 1px solid #e8e2d8;
+  }
+  .edu-summary ul { list-style: none; }
+  .edu-summary li {
+    position: relative; padding-left: 28px; margin-bottom: 14px;
+    font-size: 16px; color: #3d4a42;
+    font-family: -apple-system, sans-serif; line-height: 1.6;
+  }
+  .edu-summary li:last-child { margin-bottom: 0; }
+  .edu-summary li::before {
+    content: "✓"; position: absolute; left: 0;
+    color: #7a9b76; font-weight: 700;
+  }
+  details.edu-details {
+    max-width: 860px; margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e8e2d8;
+    overflow: hidden;
+  }
+  details.edu-details + details.edu-details { margin-top: 16px; }
+  details.edu-details summary {
+    padding: 24px 32px;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #2c3e35;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  details.edu-details summary::-webkit-details-marker { display: none; }
+  details.edu-details summary::after {
+    content: "+";
+    font-size: 24px;
+    color: #7a9b76;
+    font-weight: 400;
+    transition: transform .2s;
+  }
+  details.edu-details[open] summary::after {
+    content: "−";
+  }
+  details.edu-details .edu-content {
+    padding: 0 32px 32px;
+  }
+  details.edu-details .edu-content ul { list-style: none; }
+  details.edu-details .edu-content li {
+    position: relative; padding-left: 28px; margin-bottom: 16px;
+    font-size: 15px; color: #3d4a42;
+    font-family: -apple-system, sans-serif; line-height: 1.6;
+  }
+  details.edu-details .edu-content li:last-child { margin-bottom: 0; }
+  details.edu-details .edu-content li::before {
+    content: "—"; position: absolute; left: 0;
+    color: #7a9b76; font-weight: 700;
+  }
+  details.edu-details .edu-content .edu-sub {
+    font-size: 15px; color: #7a9b76; font-weight: 600;
+    margin: 24px 0 14px; padding-top: 16px;
+    border-top: 1px solid #e8e2d8;
+    font-family: -apple-system, sans-serif;
+  }
+  details.edu-details .edu-content .edu-sub:first-child {
+    border-top: none; margin-top: 0; padding-top: 0;
+  }
+
+  /* CTA */
+  .cta {
+    background: #5f7d5c; color: #fff; text-align: center; padding: 96px 0;
+  }
+  .cta h2 { color: #fff; }
+  .cta p { color: #d4e0d2; margin-bottom: 36px; font-family: -apple-system, sans-serif; font-size: 17px; }
+  .cta .btn { background: #fff; color: #5f7d5c; }
+  .cta .btn:hover { box-shadow: 0 12px 28px rgba(0,0,0,.2); }
+  .cta-note {
+    margin-top: 20px; font-size: 14px; color: #b8ccb6;
+    font-family: -apple-system, sans-serif;
+  }
+  .cta-contacts {
+    margin-top: 32px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  }
+  .cta-contacts a {
+    color: #fff; text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-size: 15px;
+    padding: 10px 22px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 30px;
+    transition: background .15s;
+  }
+  .cta-contacts a:hover { background: rgba(255,255,255,.15); }
+
+  /* Футер */
+  footer {
+    padding: 48px 0; text-align: center; color: #8a958f;
+    font-size: 14px; border-top: 1px solid #e8e2d8;
+    font-family: -apple-system, sans-serif;
+  }
+  footer a { color: #7a9b76; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Константин <span>Кульков</span></div>
+      <div class="nav-links">
+        <a href="#about">Обо мне</a>
+        <a href="#how">Метод</a>
+        <a href="#principles">Принципы</a>
+        <a href="#format">Формат</a>
+        <a href="#services">Темы</a>
+        <a href="#blog">Заметки</a>
+        <a href="#education">Образование</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Герой -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <h1>Психолог,<br><em>Гештальт-терапевт</em></h1>
+        <p>Индивидуальное консультирование взрослых. Помогаю справляться с тревогой, кризисами и трудностями в отношениях — находить опору в себе и жить в согласии с собой.</p>
+        <a href="#contact" class="btn">Записаться на консультацию</a>
+        <a href="#about" class="btn btn-ghost">Узнать больше</a>
+      </div>
+      <div class="hero-photo">
+        <!-- Замените на своё фото:
+        <img src="photo.jpg" alt="Константин Кульков">
+        -->
+        Ваше фото
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Обо мне -->
+<section id="about">
+  <div class="container">
+    <h2>Обо мне</h2>
+    <p class="subtitle">Человек, а не функция</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Меня зовут Константин Кульков. Я психолог и Гештальт-терапевт. Работаю со взрослыми — индивидуально, очно и онлайн.</p>
+        <p>В профессии с 2012 года, а в помогающих профессиях — с 2008-го. За это время успел поработать в системе образования, кризисных центрах, частных центрах и частной практике. Через мой кабинет прошли более двух тысяч клиентов.</p>
+        <p>В своей работе опираюсь на Гештальт-подход: помогаю замечать, что происходит здесь и сейчас, возвращать себе чувства и опору, находить способ жить в согласии с собой.</p>
+
+        <div class="about-quote">
+          «Мне во многом легче окунуться в скорби других людей, чем наблюдать их со стороны. Я ненавижу чувство, когда не можешь "добраться" до людей».
+          <div style="margin-top:12px; font-style: normal; font-size:14px; color:#7a857e;">— Эндрю Соломон, «Демон полуденный»</div>
+        </div>
+
+        <p>Мне важно, чтобы в кабинете было честно и по-настоящему. Я не работаю «по протоколу» — я работаю с человеком, который пришёл.</p>
+
+        <div class="about-photos">
+          <div>
+            <!-- <img src="photo1.jpg" alt="Фото"> -->
+            Фото
+          </div>
+          <div>
+            <!-- <img src="photo2.jpg" alt="Фото"> -->
+            Фото
+          </div>
+        </div>
+      </div>
+      <div class="about-facts">
+        <h3>Ключевые факты</h3>
+        <div class="fact">
+          <div class="fact-icon">🎓</div>
+          <div class="fact-text"><strong>Психолог, Гештальт-терапевт</strong>Специальный психолог (ЧелГУ, 2015)</div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🧠</div>
+          <div class="fact-text"><strong>Гештальт-подход</strong>Санкт-Петербургский институт Гештальта</div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">⏳</div>
+          <div class="fact-text"><strong>Опыт</strong>В профессии с 2012 года. Более 2000 клиентов.</div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">🏆</div>
+          <div class="fact-text"><strong>Победитель конкурса</strong>«Педагог-психолог Челябинской области», 2016</div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon">📚</div>
+          <div class="fact-text"><strong>Более 1000 часов</strong>дополнительного образования</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Как я работаю (метод) -->
+<section id="how" class="how">
+  <div class="container">
+    <h2>Метод</h2>
+    <p class="subtitle">Как я работаю</p>
+    <div class="how-grid">
+      <div class="how-item">
+        <h3>Гештальт-подход</h3>
+        <p>Работаю в русле Гештальт-терапии — направления, которое опирается на феноменологию, теорию поля и диалог. В центре внимания — не интерпретации и не «правильные» объяснения, а непосредственный опыт человека.</p>
+      </div>
+      <div class="how-item">
+        <h3>Феноменологический метод</h3>
+        <p>Вместо того чтобы искать причины и вешать ярлыки, мы наблюдаем то, что проявляется здесь и сейчас. Чувства, телесные реакции, образы, оговорки — материал для совместного исследования, а не повод для поспешных выводов.</p>
+      </div>
+      <div class="how-item">
+        <h3>Теория поля</h3>
+        <p>Человек не существует в вакууме — он всегда находится в поле отношений, ситуаций, контекстов. Мы смотрим не только на внутренние процессы, но и на то, как они разворачиваются в вашей жизни: в семье, работе, отношениях, в самом кабинете.</p>
+      </div>
+      <div class="how-item">
+        <h3>Диалог и контакт</h3>
+        <p>Терапия — это встреча двух людей, а не воздействие на пациента. Я не «лечу» и не «исправляю» — я присутствую, слушаю и вместе с вами исследую то, что происходит. Подлинный контакт — и есть основной инструмент работы.</p>
+      </div>
+      <div class="how-item">
+        <h3>Осознавание как процесс</h3>
+        <p>Цель работы — не «решить проблему» раз и навсегда, а расширить способность замечать: свои чувства, потребности, способы реагирования. Из этого осознавания постепенно рождаются изменения — естественные и устойчивые.</p>
+      </div>
+      <div class="how-item">
+        <h3>Ответственность и выбор</h3>
+        <p>Экзистенциальная основа Гештальта — признание свободы и ответственности человека. Мы исследуем, как вы делаете выбор, что стоит за вашими решениями, и как можно вернуть себе авторство собственной жизни.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Принципы -->
+<section id="principles" class="principles">
+  <div class="container">
+    <h2>Принципы</h2>
+    <p class="subtitle">Этика и позиция терапевта</p>
+    <div class="principles-grid">
+      <div class="principle">
+        <h3>Конфиденциальность</h3>
+        <p>Всё, что происходит в кабинете, остаётся между нами. Это не формальность, а основа безопасных отношений.</p>
+      </div>
+      <div class="principle">
+        <h3>Без осуждения и оценок</h3>
+        <p>В кабинете можно быть любым. Я не оцениваю, не ставлю диагнозов «на глаз» и не даю непрошеных советов.</p>
+      </div>
+      <div class="principle">
+        <h3>Темп задаёте вы</h3>
+        <p>Мы движемся в том темпе, который выдерживает ваша психика. Я не тороплю и не тяну. Если нужно остановиться и «побыть с этим» — мы остановимся.</p>
+      </div>
+      <div class="principle">
+        <h3>Честность и прямота</h3>
+        <p>Я говорю то, что вижу, — с уважением, но без увиливания. Иногда это может быть неудобно, но именно так возможны реальные изменения.</p>
+      </div>
+      <div class="principle">
+        <h3>Я не «лечу»</h3>
+        <p>Я не воздействую на вас и не «исправляю». Терапия — это совместная работа, в которой изменения рождаются из вашего собственного осознавания.</p>
+      </div>
+      <div class="principle">
+        <h3>Границы и регулярность</h3>
+        <p>Встречи проходят в устойчивом формате: раз в неделю, в одно и то же время. Это создаёт предсказуемость, в которой может разворачиваться живой процесс.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Формат -->
+<section id="format" class="format">
+  <div class="container">
+    <h2>Формат работы</h2>
+    <p class="subtitle">Практическая информация</p>
+    <div class="format-grid">
+      <div class="format-item">
+        <span class="format-icon">🏠</span>
+        <h3>Очно</h3>
+        <p>Челябинск, домашний кабинет. Тихая, безопасная обстановка.</p>
+      </div>
+      <div class="format-item">
+        <span class="format-icon">💻</span>
+        <h3>Онлайн</h3>
+        <p>Видеозвонок из любой точки мира. Формат, который работает не хуже очного.</p>
+      </div>
+      <div class="format-item">
+        <span class="format-icon">⏱️</span>
+        <h3>Длительность</h3>
+        <p>Сессия — 50 минут. Частота — обычно раз в неделю.</p>
+      </div>
+      <div class="format-item">
+        <span class="format-icon">🤝</span>
+        <h3>Первая встреча</h3>
+        <p>Знакомство, обсуждение запроса и того, как нам будет удобно работать.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Карьера -->
+<section id="career" class="career">
+  <div class="container">
+    <h2>Карьера</h2>
+    <p class="subtitle">Профессиональный опыт с 2008 года</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-years">2008 — 2016</div>
+        <h3>Областной центр диагностики и консультирования</h3>
+        <div class="timeline-place">Челябинск</div>
+        <div class="timeline-role">Педагог-психолог</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-years">2016 — 2017</div>
+        <h3>Школа № 481</h3>
+        <div class="timeline-place">Санкт-Петербург</div>
+        <div class="timeline-role">Педагог-психолог, социальный педагог</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-years">2017 — 2020</div>
+        <h3>Кризисный центр</h3>
+        <div class="timeline-place">Челябинск</div>
+        <div class="timeline-role">Психолог (бесплатная помощь)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-years">2020 — 2021</div>
+        <h3>Центр мониторинга социальных сетей</h3>
+        <div class="timeline-place">Челябинск</div>
+        <div class="timeline-role">Психолог</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-years">2021 — 2024</div>
+        <h3>БЕНТЭН Психология</h3>
+        <div class="timeline-place">Челябинск</div>
+        <div class="timeline-role">Психолог</div>
+      </div>
+      <div class="timeline-item active">
+        <div class="timeline-years">2024 — настоящее время</div>
+        <h3>Частная практика в Гештальт-подходе</h3>
+        <div class="timeline-place">Очно и онлайн</div>
+        <div class="timeline-role">Психолог, Гештальт-терапевт</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- С чем работаю -->
+<section id="services" class="services">
+  <div class="container">
+    <h2>С чем я работаю</h2>
+    <p class="subtitle">Темы, с которыми можно прийти</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>Тревога и напряжение</h3>
+        <p>Постоянное беспокойство, панические состояния, трудности со сном, ощущение, что не получается расслабиться.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>Отношения</h3>
+        <p>Сложности в близких и рабочих отношениях, конфликты, повторяющиеся сценарии, одиночество, потеря контакта с близкими.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>Кризисы и перемены</h3>
+        <p>Потеря, расставание, смена работы, выгорание, экзистенциальные вопросы, поиск смысла и опоры.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <h3>Отношения с собой</h3>
+        <p>Низкая самооценка, самокритика, трудности с чувствами, ощущение «не на своём месте», поиск себя.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">05</div>
+        <h3>Телесные проявления</h3>
+        <p>Работа с телесным напряжением, психосоматическими симптомами, возвращение контакта с телом.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Блог / Заметки -->
+<section id="blog" class="blog">
+  <div class="container">
+    <h2>Заметки</h2>
+    <p class="subtitle">Размышления о терапии, Гештальте и жизни</p>
+    <div class="blog-grid">
+      <a href="#" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-tag">Корни Гештальта</div>
+          <h3>Что же такое Гештальт?</h3>
+          <p>Разбираемся, откуда растёт метод: гештальт-психология, психоанализ, философия и Дзен.</p>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-tag">Размышления</div>
+          <h3>Долгое время я не признавал онлайн-терапию</h3>
+          <p>Как я менял своё отношение к работе через экран — и что в итоге понял.</p>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-tag">Психотерапия</div>
+          <h3>Такая разная психотерапия</h3>
+          <p>Какой только не бывает. Разоблачаем миф о «кушетке и кресле».</p>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-tag">Философия</div>
+          <h3>Каково быть летучей мышью?</h3>
+          <p>О квалиа, феноменологии и том, почему мы никогда не узнаем, как видит мир другой.</p>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-tag">Книги</div>
+          <h3>«Я и Ты» Мартина Бубера</h3>
+          <p>Книга, которую, по моему мнению, стоит прочитать каждому.</p>
+        </div>
+      </a>
+      <a href="#" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-tag">Корни Гештальта</div>
+          <h3>Дзен и поэзия Иккю Содзюна</h3>
+          <p>Что Гештальт взял от Дзен — и в чём с ним разошёлся.</p>
+        </div>
+      </a>
+    </div>
+    <div class="blog-more">
+      <a href="https://t.me/kulkov_blog" target="_blank" class="btn btn-ghost">Читать в Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- Образование -->
+<section id="education" class="education">
+  <div class="container">
+    <h2>Образование и квалификация</h2>
+    <p class="subtitle">Коротко о главном</p>
+
+    <div class="edu-summary">
+      <ul>
+        <li>Специальный психолог (ЧелГУ, 2015)</li>
+        <li>Гештальт-терапевт, Санкт-Петербургский институт Гештальта</li>
+        <li>Более 1000 часов дополнительного образования</li>
+        <li>200 часов личной терапии и супервизии</li>
+        <li>16 лет практики</li>
+      </ul>
+    </div>
+
+    <details class="edu-details">
+      <summary>Высшее образование</summary>
+      <div class="edu-content">
+        <ul>
+          <li>Специальность: Специальный психолог. Год: 2015. Челябинский государственный университет (ЧелГУ).</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="edu-details">
+      <summary>Дополнительное образование — 1015 часов</summary>
+      <div class="edu-content">
+
+        <div class="edu-sub">Психология и психотерапия</div>
+        <ul>
+          <li>«Современные технологии психотерапии и консультирования в стратегии личностного роста». Год: 2012. Часы: 144. Магнитогорский государственный университет, факультет психологии; Челябинская государственная медицинская академия.</li>
+          <li>«Психотерапия, практическая психология и инновационные технологии в реабилитационных программах при зависимостях». Год: 2013. Часы: 96. Евразийская профессиональная ассоциация аддиктивной медицины; Южно-Уральский государственный медицинский университет (ЮУГМУ).</li>
+          <li>Семинар-практикум по использованию проективных карт. Год: 2014. Часы: 16. Институт проективных карт (Institute of Metaphoric Associative Cards).</li>
+          <li>«Интегративные технологии в психологии». Год: 2015. Часы: 27. Центр практической психологии образования.</li>
+          <li>«Холотропное дыхание: практика применения». Год: 2015. Часы: 12. Центр практической психологии образования.</li>
+          <li>Профессиональный тренинг «Инсайт» (базовый модуль по интегративной психологии). Год: —. Часы: 74. Международная Академия Психологических наук; Международный Институт Интегративной Психологии Профессионального Развития.</li>
+        </ul>
+
+        <div class="edu-sub">Детская и подростковая психология</div>
+        <ul>
+          <li>«Оказание комплексной психолого-педагогической и медико-социальной помощи несовершеннолетним». Год: 2012. Часы: 72. Московский городской психолого-педагогический университет.</li>
+          <li>«Педагогические условия включения детей с ограниченными возможностями здоровья и детей-инвалидов в программы дополнительного образования». Год: 2015. Часы: 72. Московский городской психолого-педагогический университет.</li>
+          <li>«Организация инклюзивного образования детей-инвалидов, детей с ОВЗ в общеобразовательных организациях». Год: 2015. Часы: 72. Московский городской психолого-педагогический университет.</li>
+          <li>«Профессиональная ориентация старшеклассников в современных социально-экономических условиях». Год: 2016. Часы: —. Санкт-Петербургский государственный экономический университет (СПбГЭУ).</li>
+          <li>«Жизнь без страха. Особенности консультирования и реабилитации пострадавших с использованием реальных историй успеха». Год: 2017. Часы: —. Кризисный центр для женщин и детей «Екатерина», г. Екатеринбург.</li>
+        </ul>
+
+        <div class="edu-sub">Медиация</div>
+        <ul>
+          <li>«Практическая конфликтология. Медиативная компетентность в управлении конфликтной ситуацией». Год: 2013. Часы: 72. Челябинское региональное отделение Профессиональной психотерапевтической лиги.</li>
+          <li>«Сертифицированный Ко-медиатор» (Немецкая школа коучинга и медиации). Год: 2013. Часы: 72. Немецкая школа коучинга и медиации, г. Санкт-Петербург.</li>
+          <li>«Гражданско-правовые аспекты медиации». Год: 2014. Часы: 18. Центр «HAPPY».</li>
+          <li>«Медиация (посредничество). Базовый курс». Год: 2015. Часы: 120. ЧОУ ДПО «ЦНТИ «Прогресс», г. Санкт-Петербург.</li>
+        </ul>
+
+      </div>
+    </details>
+
+    <details class="edu-details">
+      <summary>Благодарности и достижения</summary>
+      <div class="edu-content">
+        <ul>
+          <li>Свидетельство участника Всероссийского психологического форума «Обучение. Воспитание. Развитие — 2012». Год: 2012. Город: Сочи. Федерация психологов образования России.</li>
+          <li>Сертификат участника IV Межрегиональной конференции «Психотерапия, практическая психология и инновационные технологии». Год: 2014. Город: Магнитогорск. Евразийская профессиональная ассоциация аддиктивной медицины; ЮУГМУ.</li>
+          <li>Свидетельство участника X Всероссийской научно-практической конференции «Психология образования: Модернизация системы образования в условиях введения в действие профессиональных стандартов». Год: 2014. Город: Москва. Федерация психологов образования России; Московский городской психолого-педагогический университет.</li>
+          <li>Сертификат участника Всероссийской научно-практической конференции «Организация и содержание обучения детей со сложной структурой дефекта». Год: 2014. Город: Москва. Федеральный институт развития образования (ФИРО).</li>
+          <li>Благодарность Челябинского отделения ППЛ «За активное участие в развитии медиации». Год: 2014. Челябинское региональное отделение Профессиональной психотерапевтической лиги.</li>
+          <li>Грамота Федерации психологов образования России «За активную работу в региональном отделении Южного Урала, инициативность и нестандартные решения». Год: 2014.</li>
+          <li>Диплом победителя областного конкурса профессионального мастерства «Педагог-психолог Челябинской области — 2016». Год: 2016. Министерство образования и науки Челябинской области.</li>
+          <li>Благодарность Министерства образования и науки Челябинской области «За вклад в развитие образования детей-инвалидов и детей с ОВЗ». Год: 2016.</li>
+          <li>Благодарственное письмо Уполномоченного по правам человека в Челябинской области «За эффективное применение социально-значимых психолого-педагогических технологий в работе с несовершеннолетними с девиантным (социально-опасным) поведением». Год: 2016.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="edu-details">
+      <summary>Личная терапия и супервизия</summary>
+      <div class="edu-content">
+        <ul>
+          <li>Санкт-Петербургский институт Гештальта. Пролонгированная психотерапевтическая группа. Год: 2015. Объём: 200 часов.</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- Контакты -->
+<section id="contact" class="cta">
+  <div class="container">
+    <h2>Запись на консультацию</h2>
+    <p>Напишите мне, и мы подберём удобное время</p>
+    <a href="mailto:ваш@email.ru" class="btn">Написать мне</a>
+    <div class="cta-note">Очно в Челябинске и онлайн</div>
+    <div class="cta-contacts">
+      <a href="https://t.me/kulkov_km" target="_blank">Telegram: @kulkov_km</a>
+      <a href="https://t.me/kulkov_blog" target="_blank">Канал: @kulkov_blog</a>
+      <a href="mailto:ваш@email.ru">ваш@email.ru</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2025 Константин Михайлович Кульков · Психолог, Гештальт-терапевт<br>
+    <a href="https://t.me/kulkov_blog" target="_blank">t.me/kulkov_blog</a>
+  </div>
+</footer>
+
+</body>
+</html>
