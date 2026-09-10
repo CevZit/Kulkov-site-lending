@@ -80,3 +80,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Кнопка "наверх"
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollBtn = document.createElement('button');
+  scrollBtn.className = 'scroll-top';
+  scrollBtn.setAttribute('aria-label', 'Наверх');
+  scrollBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(scrollBtn);
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+});
