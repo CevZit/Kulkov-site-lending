@@ -378,6 +378,62 @@
     border-top: none; margin-top: 0; padding-top: 0;
   }
 
+  /* Карусель документов */
+  .docs-carousel {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0 30px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #c4d6c0 transparent;
+  }
+  .docs-carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+  .docs-carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .docs-carousel::-webkit-scrollbar-thumb {
+    background: #c4d6c0;
+    border-radius: 4px;
+  }
+  .docs-track {
+    display: flex;
+    gap: 20px;
+    padding: 0 4px;
+  }
+  .doc-slide {
+    flex: 0 0 auto;
+    width: 260px;
+    height: 340px;
+    scroll-snap-align: start;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e2d8;
+    box-shadow: 0 6px 20px rgba(60,80,60,.06);
+    transition: transform .2s, box-shadow .2s;
+    cursor: zoom-in;
+  }
+  .doc-slide:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(60,80,60,.14);
+  }
+  .doc-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 600px) {
+    .doc-slide {
+      width: 200px;
+      height: 260px;
+    }
+  }
+
   /* CTA */
   .cta {
     background: #5f7d5c; color: #fff; text-align: center; padding: 96px 0;
@@ -596,11 +652,6 @@
         <p>Видеозвонок из любой точки мира. Формат, который работает не хуже очного.</p>
       </div>
       <div class="format-item">
-        <span class="format-icon">⏱️</span>
-        <h3>Длительность</h3>
-        <p>Сессия — 50 минут. Частота — обычно раз в неделю.</p>
-      </div>
-      <div class="format-item">
         <span class="format-icon">🤝</span>
         <h3>Первая встреча</h3>
         <p>Знакомство, обсуждение запроса и того, как нам будет удобно работать.</p>
@@ -750,7 +801,7 @@
 <section id="education" class="education">
   <div class="container">
     <h2>Образование и квалификация</h2>
-    <p class="subtitle">Коротко о главном</p>
+    <p class="subtitle">Документы и подтверждения</p>
 
     <div class="edu-summary">
       <ul>
@@ -762,74 +813,50 @@
       </ul>
     </div>
 
-    <details class="edu-details">
-      <summary>Высшее образование</summary>
-      <div class="edu-content">
-        <ul>
-          <li>Специальность: Специальный психолог. Год: 2015. Челябинский государственный университет (ЧелГУ).</li>
-        </ul>
+    <!-- Карусель документов -->
+    <div class="docs-carousel">
+      <div class="docs-track">
+        <div class="doc-slide"><img src="20200621_143629.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143709.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143716.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143723.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143732.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143815.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143826.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143907.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143910.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143916.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143920.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143927.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143929.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_143935.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144008.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144013.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144049.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144053.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144059.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144103.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144107.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144112.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144127.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144132.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144136.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144143.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144148.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144153.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144157.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144204.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144208.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144214.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144221.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144231.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144235.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144241.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144245.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144255.jpg" alt="Документ" loading="lazy"></div>
+        <div class="doc-slide"><img src="20200621_144306.jpg" alt="Документ" loading="lazy"></div>
       </div>
-    </details>
-
-    <details class="edu-details">
-      <summary>Дополнительное образование — 1015 часов</summary>
-      <div class="edu-content">
-
-        <div class="edu-sub">Психология и психотерапия</div>
-        <ul>
-          <li>«Современные технологии психотерапии и консультирования в стратегии личностного роста». Год: 2012. Часы: 144. Магнитогорский государственный университет, факультет психологии; Челябинская государственная медицинская академия.</li>
-          <li>«Психотерапия, практическая психология и инновационные технологии в реабилитационных программах при зависимостях». Год: 2013. Часы: 96. Евразийская профессиональная ассоциация аддиктивной медицины; Южно-Уральский государственный медицинский университет (ЮУГМУ).</li>
-          <li>Семинар-практикум по использованию проективных карт. Год: 2014. Часы: 16. Институт проективных карт (Institute of Metaphoric Associative Cards).</li>
-          <li>«Интегративные технологии в психологии». Год: 2015. Часы: 27. Центр практической психологии образования.</li>
-          <li>«Холотропное дыхание: практика применения». Год: 2015. Часы: 12. Центр практической психологии образования.</li>
-          <li>Профессиональный тренинг «Инсайт» (базовый модуль по интегративной психологии). Год: —. Часы: 74. Международная Академия Психологических наук; Международный Институт Интегративной Психологии Профессионального Развития.</li>
-        </ul>
-
-        <div class="edu-sub">Детская и подростковая психология</div>
-        <ul>
-          <li>«Оказание комплексной психолого-педагогической и медико-социальной помощи несовершеннолетним». Год: 2012. Часы: 72. Московский городской психолого-педагогический университет.</li>
-          <li>«Педагогические условия включения детей с ограниченными возможностями здоровья и детей-инвалидов в программы дополнительного образования». Год: 2015. Часы: 72. Московский городской психолого-педагогический университет.</li>
-          <li>«Организация инклюзивного образования детей-инвалидов, детей с ОВЗ в общеобразовательных организациях». Год: 2015. Часы: 72. Московский городской психолого-педагогический университет.</li>
-          <li>«Профессиональная ориентация старшеклассников в современных социально-экономических условиях». Год: 2016. Часы: —. Санкт-Петербургский государственный экономический университет (СПбГЭУ).</li>
-          <li>«Жизнь без страха. Особенности консультирования и реабилитации пострадавших с использованием реальных историй успеха». Год: 2017. Часы: —. Кризисный центр для женщин и детей «Екатерина», г. Екатеринбург.</li>
-        </ul>
-
-        <div class="edu-sub">Медиация</div>
-        <ul>
-          <li>«Практическая конфликтология. Медиативная компетентность в управлении конфликтной ситуацией». Год: 2013. Часы: 72. Челябинское региональное отделение Профессиональной психотерапевтической лиги.</li>
-          <li>«Сертифицированный Ко-медиатор» (Немецкая школа коучинга и медиации). Год: 2013. Часы: 72. Немецкая школа коучинга и медиации, г. Санкт-Петербург.</li>
-          <li>«Гражданско-правовые аспекты медиации». Год: 2014. Часы: 18. Центр «HAPPY».</li>
-          <li>«Медиация (посредничество). Базовый курс». Год: 2015. Часы: 120. ЧОУ ДПО «ЦНТИ «Прогресс», г. Санкт-Петербург.</li>
-        </ul>
-
-      </div>
-    </details>
-
-    <details class="edu-details">
-      <summary>Благодарности и достижения</summary>
-      <div class="edu-content">
-        <ul>
-          <li>Свидетельство участника Всероссийского психологического форума «Обучение. Воспитание. Развитие — 2012». Год: 2012. Город: Сочи. Федерация психологов образования России.</li>
-          <li>Сертификат участника IV Межрегиональной конференции «Психотерапия, практическая психология и инновационные технологии». Год: 2014. Город: Магнитогорск. Евразийская профессиональная ассоциация аддиктивной медицины; ЮУГМУ.</li>
-          <li>Свидетельство участника X Всероссийской научно-практической конференции «Психология образования: Модернизация системы образования в условиях введения в действие профессиональных стандартов». Год: 2014. Город: Москва. Федерация психологов образования России; Московский городской психолого-педагогический университет.</li>
-          <li>Сертификат участника Всероссийской научно-практической конференции «Организация и содержание обучения детей со сложной структурой дефекта». Год: 2014. Город: Москва. Федеральный институт развития образования (ФИРО).</li>
-          <li>Благодарность Челябинского отделения ППЛ «За активное участие в развитии медиации». Год: 2014. Челябинское региональное отделение Профессиональной психотерапевтической лиги.</li>
-          <li>Грамота Федерации психологов образования России «За активную работу в региональном отделении Южного Урала, инициативность и нестандартные решения». Год: 2014.</li>
-          <li>Диплом победителя областного конкурса профессионального мастерства «Педагог-психолог Челябинской области — 2016». Год: 2016. Министерство образования и науки Челябинской области.</li>
-          <li>Благодарность Министерства образования и науки Челябинской области «За вклад в развитие образования детей-инвалидов и детей с ОВЗ». Год: 2016.</li>
-          <li>Благодарственное письмо Уполномоченного по правам человека в Челябинской области «За эффективное применение социально-значимых психолого-педагогических технологий в работе с несовершеннолетними с девиантным (социально-опасным) поведением». Год: 2016.</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="edu-details">
-      <summary>Личная терапия и супервизия</summary>
-      <div class="edu-content">
-        <ul>
-          <li>Санкт-Петербургский институт Гештальта. Пролонгированная психотерапевтическая группа. Год: 2015. Объём: 200 часов.</li>
-        </ul>
-      </div>
-    </details>
+    </div>
 
   </div>
 </section>
