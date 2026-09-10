@@ -4,544 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Константин Кульков — психолог, Гештальт-терапевт</title>
-<meta name="description" content="Константин Кульков — психолог, Гештальт-терапевт. Индивидуальное консультирование взрослых очно и онлайн. 16 лет практики, более 1000 часов дополнительного образования.">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #2c3e35;
-    line-height: 1.7;
-    background: #faf8f4;
-  }
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+<meta name="description" content="Константин Кульков — психолог, Гештальт-терапевт. Индивидуальное консультирование взрослых очно и онлайн. 16 лет практики.">
+<link rel="stylesheet" href="style.css">
 
-  /* Шапка */
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(250,248,244,0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e8e2d8;
-  }
-  nav {
-    display: flex; justify-content: space-between; align-items: center;
-    height: 72px;
-  }
-  .logo { font-weight: 700; font-size: 19px; letter-spacing: 0.02em; color: #2c3e35; }
-  .logo span { color: #7a9b76; }
-  .nav-links { display: none; }
-  @media (min-width: 1000px) { .nav-links { display: block; } }
-  nav a {
-    color: #2c3e35; text-decoration: none; margin-left: 20px;
-    font-size: 14px; font-family: -apple-system, sans-serif;
-  }
-  nav a:hover { color: #7a9b76; }
+<!-- Яндекс.Метрика — замените XXXXXX на номер счётчика -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(XXXXXX, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+  });
+</script>
+<!-- /Яндекс.Метрика -->
 
-  /* Герой */
-  .hero {
-    padding: 100px 0 90px;
-    background: linear-gradient(165deg, #eef2ec 0%, #faf8f4 65%);
-  }
-  .hero-inner {
-    display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;
-  }
-  @media (min-width: 820px) {
-    .hero-inner { grid-template-columns: 1.15fr 0.85fr; gap: 64px; }
-  }
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 52px);
-    line-height: 1.15; letter-spacing: -0.01em;
-    margin-bottom: 24px; font-weight: 400;
-  }
-  .hero h1 em { font-style: italic; color: #7a9b76; }
-  .hero p {
-    font-size: clamp(16px, 2vw, 19px); color: #5a6b60;
-    max-width: 560px; margin-bottom: 36px;
-    font-family: -apple-system, sans-serif;
-  }
-  .btn {
-    display: inline-block;
-    background: #7a9b76; color: #fff;
-    padding: 16px 36px; border-radius: 40px;
-    text-decoration: none; font-weight: 600; font-size: 16px;
-    font-family: -apple-system, sans-serif;
-    border: none; cursor: pointer;
-    transition: transform .15s, box-shadow .15s;
-  }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(122,155,118,.35); }
-  .btn-ghost {
-    background: transparent; color: #7a9b76;
-    border: 2px solid #7a9b76; margin-left: 12px;
-  }
-  .btn-ghost:hover { box-shadow: none; background: #eef2ec; }
-  .hero-photo {
-    aspect-ratio: 4/5;
-    background: linear-gradient(160deg, #d9e4d5 0%, #c4d6c0 100%);
-    border-radius: 200px 200px 24px 24px;
-    display: flex; align-items: center; justify-content: center;
-    color: #7a9b76; font-size: 15px; text-align: center; padding: 24px;
-    font-family: -apple-system, sans-serif;
-    overflow: hidden;
-  }
-  .hero-photo img {
-    width: 100%; height: 100%; object-fit: cover;
-    border-radius: 200px 200px 24px 24px;
-  }
-
-  /* Секции */
-  section { padding: 88px 0; }
-  h2 {
-    font-size: clamp(26px, 3.8vw, 40px);
-    text-align: center; margin-bottom: 16px;
-    letter-spacing: -0.01em; font-weight: 400;
-  }
-  .subtitle {
-    text-align: center; color: #7a857e; margin-bottom: 56px;
-    font-family: -apple-system, sans-serif; font-size: 16px;
-  }
-
-  /* Обо мне */
-  .about-grid {
-    display: grid; grid-template-columns: 1fr; gap: 40px;
-  }
-  @media (min-width: 820px) {
-    .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
-  }
-  .about-text p { margin-bottom: 20px; font-size: 17px; color: #3d4a42; }
-  .about-quote {
-    margin: 32px 0;
-    padding: 24px 28px;
-    background: #fff;
-    border-left: 3px solid #7a9b76;
-    border-radius: 0 12px 12px 0;
-    font-style: italic;
-    color: #4a5a50;
-    font-size: 16px;
-  }
-  .about-photos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 32px;
-  }
-  .about-photos div {
-    aspect-ratio: 1;
-    background: linear-gradient(160deg, #eef2ec 0%, #d9e4d5 100%);
-    border-radius: 16px;
-    display: flex; align-items: center; justify-content: center;
-    color: #7a9b76; font-size: 13px; text-align: center; padding: 12px;
-    font-family: -apple-system, sans-serif;
-    overflow: hidden;
-  }
-  .about-photos img {
-    width: 100%; height: 100%; object-fit: cover; border-radius: 16px;
-  }
-  .about-facts {
-    background: #fff; border-radius: 24px; padding: 40px 36px;
-    border: 1px solid #e8e2d8;
-  }
-  .about-facts h3 {
-    font-size: 15px; text-transform: uppercase; letter-spacing: 0.1em;
-    color: #7a9b76; margin-bottom: 24px; font-weight: 600;
-    font-family: -apple-system, sans-serif;
-  }
-  .fact { display: flex; gap: 16px; margin-bottom: 22px; }
-  .fact:last-child { margin-bottom: 0; }
-  .fact-icon {
-    flex-shrink: 0; width: 40px; height: 40px; border-radius: 12px;
-    background: #eef2ec; display: flex; align-items: center;
-    justify-content: center; font-size: 18px;
-  }
-  .fact-text { font-size: 15px; color: #3d4a42; font-family: -apple-system, sans-serif; }
-  .fact-text strong { display: block; font-size: 16px; margin-bottom: 3px; color: #2c3e35; }
-
-  /* Как я работаю */
-  .how { background: #f3f0ea; }
-  .how-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-  .how-item {
-    background: #fff; border-radius: 18px; padding: 32px 30px;
-    border: 1px solid #e8e2d8;
-  }
-  .how-item h3 {
-    font-size: 19px; margin-bottom: 12px; font-weight: 400;
-    color: #2c3e35;
-  }
-  .how-item p { color: #5a6b60; font-size: 15px; font-family: -apple-system, sans-serif; }
-
-  /* Принципы */
-  .principles { background: #fff; }
-  .principles-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-  @media (min-width: 720px) {
-    .principles-grid { grid-template-columns: 1fr 1fr; }
-  }
-  .principle {
-    padding: 28px 32px;
-    background: #faf8f4;
-    border-radius: 18px;
-    border: 1px solid #e8e2d8;
-  }
-  .principle h3 {
-    font-size: 18px; margin-bottom: 10px; font-weight: 400;
-    color: #2c3e35;
-  }
-  .principle p { color: #5a6b60; font-size: 15px; font-family: -apple-system, sans-serif; }
-
-  /* Формат */
-  .format { background: #f3f0ea; }
-  .format-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px; max-width: 900px; margin: 0 auto;
-  }
-  .format-item {
-    text-align: center; padding: 32px 24px;
-    background: #fff; border-radius: 18px;
-    border: 1px solid #e8e2d8;
-  }
-  .format-icon {
-    font-size: 28px; margin-bottom: 14px; display: block;
-  }
-  .format-item h3 {
-    font-size: 17px; margin-bottom: 8px; font-weight: 400;
-  }
-  .format-item p { color: #5a6b60; font-size: 14px; font-family: -apple-system, sans-serif; }
-
-  /* Карьера */
-  .career { background: #fff; }
-  .timeline {
-    max-width: 780px; margin: 0 auto;
-    position: relative; padding-left: 32px;
-  }
-  .timeline::before {
-    content: ""; position: absolute; left: 8px; top: 8px; bottom: 8px;
-    width: 2px; background: #c4d6c0;
-  }
-  .timeline-item { position: relative; margin-bottom: 40px; }
-  .timeline-item:last-child { margin-bottom: 0; }
-  .timeline-item::before {
-    content: ""; position: absolute; left: -32px; top: 6px;
-    width: 18px; height: 18px; border-radius: 50%;
-    background: #fff; border: 3px solid #7a9b76;
-  }
-  .timeline-item.active::before {
-    background: #7a9b76; box-shadow: 0 0 0 5px rgba(122,155,118,.2);
-  }
-  .timeline-years {
-    font-size: 13px; color: #7a9b76; letter-spacing: 0.08em;
-    font-weight: 600; margin-bottom: 6px;
-    font-family: -apple-system, sans-serif;
-  }
-  .timeline-item h3 {
-    font-size: 20px; margin-bottom: 4px; font-weight: 400; color: #2c3e35;
-  }
-  .timeline-place {
-    font-size: 14px; color: #7a857e; margin-bottom: 8px;
-    font-family: -apple-system, sans-serif; font-style: italic;
-  }
-  .timeline-role {
-    font-size: 15px; color: #3d4a42; font-family: -apple-system, sans-serif;
-  }
-
-  /* С чем работаю */
-  .services { background: #f3f0ea; }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-  }
-  .card {
-    background: #fff; border-radius: 20px; padding: 36px 32px;
-    border: 1px solid #e8e2d8;
-    transition: box-shadow .2s, transform .2s;
-  }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(60,80,60,.08); }
-  .card-num {
-    font-size: 13px; color: #7a9b76; letter-spacing: 0.12em;
-    font-weight: 600; margin-bottom: 20px; font-family: -apple-system, sans-serif;
-  }
-  .card h3 { font-size: 21px; margin-bottom: 14px; font-weight: 400; }
-  .card p { color: #5a6b60; font-size: 15px; font-family: -apple-system, sans-serif; }
-
-  /* Блог */
-  .blog { background: #fff; }
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-  }
-  .blog-card {
-    background: #faf8f4; border-radius: 20px; overflow: hidden;
-    border: 1px solid #e8e2d8;
-    transition: box-shadow .2s, transform .2s;
-    text-decoration: none; color: inherit;
-    display: block;
-  }
-  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(60,80,60,.1); }
-  .blog-card-body { padding: 28px 28px 32px; }
-  .blog-tag {
-    font-size: 12px; color: #7a9b76; letter-spacing: 0.1em;
-    font-weight: 600; margin-bottom: 12px;
-    font-family: -apple-system, sans-serif; text-transform: uppercase;
-  }
-  .blog-card h3 {
-    font-size: 19px; margin-bottom: 12px; font-weight: 400;
-    line-height: 1.35;
-  }
-  .blog-card p {
-    color: #5a6b60; font-size: 14px;
-    font-family: -apple-system, sans-serif;
-  }
-  .blog-more {
-    text-align: center; margin-top: 48px;
-  }
-
-  /* Образование */
-  .education { background: #f3f0ea; }
-  .edu-summary {
-    max-width: 860px; margin: 0 auto 48px;
-    background: #fff; border-radius: 20px;
-    padding: 36px 40px;
-    border: 1px solid #e8e2d8;
-  }
-  .edu-summary ul { list-style: none; }
-  .edu-summary li {
-    position: relative; padding-left: 28px; margin-bottom: 14px;
-    font-size: 16px; color: #3d4a42;
-    font-family: -apple-system, sans-serif; line-height: 1.6;
-  }
-  .edu-summary li:last-child { margin-bottom: 0; }
-  .edu-summary li::before {
-    content: "✓"; position: absolute; left: 0;
-    color: #7a9b76; font-weight: 700;
-  }
-  details.edu-details {
-    max-width: 860px; margin: 0 auto;
-    background: #fff;
-    border-radius: 16px;
-    border: 1px solid #e8e2d8;
-    overflow: hidden;
-  }
-  details.edu-details + details.edu-details { margin-top: 16px; }
-  details.edu-details summary {
-    padding: 24px 32px;
-    cursor: pointer;
-    font-family: -apple-system, sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: #2c3e35;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  details.edu-details summary::-webkit-details-marker { display: none; }
-  details.edu-details summary::after {
-    content: "+";
-    font-size: 24px;
-    color: #7a9b76;
-    font-weight: 400;
-    transition: transform .2s;
-  }
-  details.edu-details[open] summary::after {
-    content: "−";
-  }
-  details.edu-details .edu-content {
-    padding: 0 32px 32px;
-  }
-  details.edu-details .edu-content ul { list-style: none; }
-  details.edu-details .edu-content li {
-    position: relative; padding-left: 28px; margin-bottom: 16px;
-    font-size: 15px; color: #3d4a42;
-    font-family: -apple-system, sans-serif; line-height: 1.6;
-  }
-  details.edu-details .edu-content li:last-child { margin-bottom: 0; }
-  details.edu-details .edu-content li::before {
-    content: "—"; position: absolute; left: 0;
-    color: #7a9b76; font-weight: 700;
-  }
-  details.edu-details .edu-content .edu-sub {
-    font-size: 15px; color: #7a9b76; font-weight: 600;
-    margin: 24px 0 14px; padding-top: 16px;
-    border-top: 1px solid #e8e2d8;
-    font-family: -apple-system, sans-serif;
-  }
-  details.edu-details .edu-content .edu-sub:first-child {
-    border-top: none; margin-top: 0; padding-top: 0;
-  }
-
-  /* Карусель документов */
-  .docs-carousel {
-    position: relative;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 20px 0 30px;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: #c4d6c0 transparent;
-  }
-  .docs-carousel::-webkit-scrollbar {
-    height: 8px;
-  }
-  .docs-carousel::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .docs-carousel::-webkit-scrollbar-thumb {
-    background: #c4d6c0;
-    border-radius: 4px;
-  }
-  .docs-track {
-    display: flex;
-    gap: 20px;
-    padding: 0 4px;
-  }
-  .doc-slide {
-    flex: 0 0 auto;
-    width: 260px;
-    height: 340px;
-    scroll-snap-align: start;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #e8e2d8;
-    box-shadow: 0 6px 20px rgba(60,80,60,.06);
-    transition: transform .2s, box-shadow .2s;
-    cursor: zoom-in;
-  }
-  .doc-slide:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 36px rgba(60,80,60,.14);
-  }
-  .doc-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  @media (max-width: 600px) {
-    .doc-slide {
-      width: 200px;
-      height: 260px;
-    }
-  }
-
-  /* Плавающая навигация */
-  .float-nav {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 100;
-    font-family: -apple-system, sans-serif;
-  }
-  .float-nav-toggle {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #7a9b76;
-    color: #fff;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 8px 24px rgba(122,155,118,.4);
-    transition: transform .2s, background .2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .float-nav-toggle:hover { transform: scale(1.05); }
-  .float-nav.open .float-nav-toggle { transform: rotate(45deg); }
-  .float-nav-menu {
-    position: absolute;
-    right: 0;
-    bottom: 70px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 16px 48px rgba(60,80,60,.15);
-    padding: 12px 0;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity .2s, transform .2s, visibility .2s;
-    border: 1px solid #e8e2d8;
-  }
-  .float-nav.open .float-nav-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .float-nav-menu a {
-    display: block;
-    padding: 10px 24px;
-    color: #2c3e35;
-    text-decoration: none;
-    font-size: 15px;
-    transition: background .15s;
-  }
-  .float-nav-menu a:hover {
-    background: #f3f0ea;
-    color: #7a9b76;
-  }
-
-  /* CTA */
-  .cta {
-    background: #5f7d5c; color: #fff; text-align: center; padding: 96px 0;
-  }
-  .cta h2 { color: #fff; }
-  .cta p { color: #d4e0d2; margin-bottom: 36px; font-family: -apple-system, sans-serif; font-size: 17px; }
-  .cta .btn { background: #fff; color: #5f7d5c; }
-  .cta .btn:hover { box-shadow: 0 12px 28px rgba(0,0,0,.2); }
-  .cta-note {
-    margin-top: 20px; font-size: 14px; color: #b8ccb6;
-    font-family: -apple-system, sans-serif;
-  }
-  .cta-contacts {
-    margin-top: 32px;
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
-  }
-  .cta-contacts a {
-    color: #fff; text-decoration: none;
-    font-family: -apple-system, sans-serif;
-    font-size: 15px;
-    padding: 10px 22px;
-    border: 1px solid rgba(255,255,255,.4);
-    border-radius: 30px;
-    transition: background .15s;
-  }
-  .cta-contacts a:hover { background: rgba(255,255,255,.15); }
-
-  /* Футер */
-  footer {
-    padding: 48px 0; text-align: center; color: #8a958f;
-    font-size: 14px; border-top: 1px solid #e8e2d8;
-    font-family: -apple-system, sans-serif;
-  }
-  footer a { color: #7a9b76; text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-</style>
 </head>
 <body>
 
 <header>
   <div class="container">
     <nav>
-      <div class="logo">Константин <span>Кульков</span></div>
+      <a href="index.html" class="logo">Константин <span>Кульков</span></a>
       <div class="nav-links">
         <a href="#about">Обо мне</a>
         <a href="#how">Метод</a>
         <a href="#principles">Принципы</a>
         <a href="#format">Формат</a>
         <a href="#services">Темы</a>
-        <a href="#blog">Заметки</a>
+        <a href="#blog">Блог</a>
+        <a href="#faq">Вопросы</a>
         <a href="#education">Образование</a>
         <a href="#contact">Контакты</a>
       </div>
@@ -556,7 +52,7 @@
       <div>
         <h1>Психолог,<br><em>Гештальт-терапевт</em></h1>
         <p>Индивидуальное консультирование взрослых. Помогаю справляться с тревогой, кризисами и трудностями в отношениях — находить опору в себе и жить в согласии с собой.</p>
-        <a href="#contact" class="btn">Записаться на консультацию</a>
+        <a href="#contact" class="btn" data-goal="click_zapis">Записаться на консультацию</a>
         <a href="#about" class="btn btn-ghost">Узнать больше</a>
       </div>
       <div class="hero-photo">
@@ -570,7 +66,7 @@
 <section id="about">
   <div class="container">
     <h2>Обо мне</h2>
-    <p class="subtitle">Человек, а не функция</p>
+    <p class="subtitle">Профессиональный путь и принципы работы</p>
     <div class="about-grid">
       <div class="about-text">
         <p>Меня зовут Константин Кульков. Я психолог и Гештальт-терапевт. Работаю со взрослыми — индивидуально, очно и онлайн.</p>
@@ -585,12 +81,8 @@
         <p>Мне важно, чтобы в кабинете было честно и по-настоящему. Я не работаю «по протоколу» — я работаю с человеком, который пришёл.</p>
 
         <div class="about-photos">
-          <div>
-            <img src="IMG_8531.jpg" alt="Константин Кульков">
-          </div>
-          <div>
-            <img src="IMG_8576.jpg" alt="Константин Кульков">
-          </div>
+          <div><img src="IMG_8531.jpg" alt="Константин Кульков"></div>
+          <div><img src="IMG_8576.jpg" alt="Константин Кульков"></div>
         </div>
       </div>
       <div class="about-facts">
@@ -616,7 +108,7 @@
   </div>
 </section>
 
-<!-- Как я работаю (метод) -->
+<!-- Метод -->
 <section id="how" class="how">
   <div class="container">
     <h2>Гештальт-подход</h2>
@@ -628,23 +120,23 @@
       </div>
       <div class="how-item">
         <h3>Феноменологический метод</h3>
-        <p>Вместо того чтобы искать причины и вешать ярлыки, мы наблюдаем то, что проявляется здесь и сейчас. Чувства, телесные реакции, образы, оговорки — материал для совместного исследования, а не повод для поспешных выводов.</p>
+        <p>Вместо того чтобы искать причины и вешать ярлыки, мы наблюдаем то, что проявляется здесь и сейчас. Чувства, телесные реакции, образы, оговорки — материал для совместного исследования.</p>
       </div>
       <div class="how-item">
         <h3>Теория поля</h3>
-        <p>Человек не существует в вакууме — он всегда находится в поле отношений, ситуаций, контекстов. Мы смотрим не только на внутренние процессы, но и на то, как они разворачиваются в вашей жизни: в семье, работе, отношениях, в самом кабинете.</p>
+        <p>Человек не существует в вакууме — он всегда находится в поле отношений, ситуаций, контекстов. Мы смотрим не только на внутренние процессы, но и на то, как они разворачиваются в вашей жизни.</p>
       </div>
       <div class="how-item">
         <h3>Диалог и контакт</h3>
-        <p>Терапия — это встреча двух людей, а не воздействие на пациента. Я не «лечу» и не «исправляю» — я присутствую, слушаю и вместе с вами исследую то, что происходит. Подлинный контакт — и есть основной инструмент работы.</p>
+        <p>Терапия — это встреча двух людей, а не воздействие на пациента. Я не «лечу» и не «исправляю» — я присутствую, слушаю и вместе с вами исследую то, что происходит.</p>
       </div>
       <div class="how-item">
         <h3>Осознавание как процесс</h3>
-        <p>Цель работы — не «решить проблему» раз и навсегда, а расширить способность замечать: свои чувства, потребности, способы реагирования. Из этого осознавания постепенно рождаются изменения — естественные и устойчивые.</p>
+        <p>Цель работы — не «решить проблему» раз и навсегда, а расширить способность замечать: свои чувства, потребности, способы реагирования.</p>
       </div>
       <div class="how-item">
         <h3>Ответственность и выбор</h3>
-        <p>Экзистенциальная основа Гештальта — признание свободы и ответственности человека. Мы исследуем, как вы делаете выбор, что стоит за вашими решениями, и как можно вернуть себе авторство собственной жизни.</p>
+        <p>Экзистенциальная основа Гештальта — признание свободы и ответственности человека. Мы исследуем, как вы делаете выбор и как вернуть себе авторство собственной жизни.</p>
       </div>
     </div>
   </div>
@@ -666,7 +158,7 @@
       </div>
       <div class="principle">
         <h3>Темп задаёте вы</h3>
-        <p>Мы движемся в том темпе, который выдерживает ваша психика. Я не тороплю и не тяну. Если нужно остановиться и «побыть с этим» — мы остановимся.</p>
+        <p>Мы движемся в том темпе, который выдерживает ваша психика. Я не тороплю и не тяну.</p>
       </div>
       <div class="principle">
         <h3>Честность и прямота</h3>
@@ -678,7 +170,7 @@
       </div>
       <div class="principle">
         <h3>Границы и регулярность</h3>
-        <p>Встречи проходят в устойчивом формате: раз в неделю, в одно и то же время. Это создаёт предсказуемость, в которой может разворачиваться живой процесс.</p>
+        <p>Встречи проходят в устойчивом формате: раз в неделю, в одно и то же время.</p>
       </div>
     </div>
   </div>
@@ -791,48 +283,48 @@
   </div>
 </section>
 
-<!-- Блог / Заметки -->
+<!-- Блог -->
 <section id="blog" class="blog">
   <div class="container">
-    <h2>Заметки</h2>
+    <h2>Блог</h2>
     <p class="subtitle">Размышления о терапии, Гештальте и жизни</p>
     <div class="blog-grid">
-      <a href="#" class="blog-card">
+      <a href="blog-geshtalt.html" class="blog-card">
         <div class="blog-card-body">
           <div class="blog-tag">Корни Гештальта</div>
           <h3>Что же такое Гештальт?</h3>
           <p>Разбираемся, откуда растёт метод: гештальт-психология, психоанализ, философия и Дзен.</p>
         </div>
       </a>
-      <a href="#" class="blog-card">
+      <a href="blog-online.html" class="blog-card">
         <div class="blog-card-body">
           <div class="blog-tag">Размышления</div>
           <h3>Долгое время я не признавал онлайн-терапию</h3>
           <p>Как я менял своё отношение к работе через экран — и что в итоге понял.</p>
         </div>
       </a>
-      <a href="#" class="blog-card">
+      <a href="blog-psihoterapiya.html" class="blog-card">
         <div class="blog-card-body">
           <div class="blog-tag">Психотерапия</div>
           <h3>Такая разная психотерапия</h3>
           <p>Какой только не бывает. Разоблачаем миф о «кушетке и кресле».</p>
         </div>
       </a>
-      <a href="#" class="blog-card">
+      <a href="blog-mysh.html" class="blog-card">
         <div class="blog-card-body">
           <div class="blog-tag">Философия</div>
           <h3>Каково быть летучей мышью?</h3>
           <p>О квалиа, феноменологии и том, почему мы никогда не узнаем, как видит мир другой.</p>
         </div>
       </a>
-      <a href="#" class="blog-card">
+      <a href="blog-buber.html" class="blog-card">
         <div class="blog-card-body">
           <div class="blog-tag">Книги</div>
           <h3>«Я и Ты» Мартина Бубера</h3>
           <p>Книга, которую, по моему мнению, стоит прочитать каждому.</p>
         </div>
       </a>
-      <a href="#" class="blog-card">
+      <a href="blog-dzen.html" class="blog-card">
         <div class="blog-card-body">
           <div class="blog-tag">Корни Гештальта</div>
           <h3>Дзен и поэзия Иккю Содзюна</h3>
@@ -840,8 +332,39 @@
         </div>
       </a>
     </div>
-    <div class="blog-more">
-      <a href="https://t.me/kulkov_blog" target="_blank" class="btn btn-ghost">Читать в Telegram</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Частые вопросы</h2>
+    <p class="subtitle">Что важно знать перед первой встречей</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Сколько длится консультация?</summary>
+        <div class="faq-content">Сессия длится 50 минут. Обычно встречи проходят раз в неделю, в одно и то же время. Это устойчивый формат, который создаёт предсказуемость и позволяет процессу разворачиваться.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Что будет на первой встрече?</summary>
+        <div class="faq-content">Это знакомство. Мы обсудим ваш запрос, то, что вас беспокоит, и то, как нам будет удобно работать. Вы сможете задать любые вопросы. По итогам первой встречи вы сами решите, продолжать ли.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Вы работаете онлайн?</summary>
+        <div class="faq-content">Да. Я принимаю очно в Челябинске и онлайн — по видеозвонку из любой точки мира. Мой опыт показывает, что онлайн-терапия работает не хуже очной, если оба участника включены в процесс.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько нужно встреч?</summary>
+        <div class="faq-content">Это индивидуально. Кто-то приходит с конкретным вопросом и находит решение за несколько встреч. Кому-то нужна длительная работа. Мы обсудим это на первой встрече — я не буду навязывать формат, который вам не подходит.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Это конфиденциально?</summary>
+        <div class="faq-content">Да. Всё, что происходит в кабинете, остаётся между нами. Исключения — только те, что прописаны в законе (угроза жизни и здоровью). Это основа безопасных отношений.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Как записаться?</summary>
+        <div class="faq-content">Напишите мне в Telegram <a href="https://t.me/kulkov_km" target="_blank">@kulkov_km</a> или оставьте заявку через форму ниже. Я отвечу и мы подберём удобное время.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -875,34 +398,30 @@
     <details class="edu-details">
       <summary>Дополнительное образование — 1015 часов</summary>
       <div class="edu-content">
-
         <div class="edu-sub">Психология и психотерапия</div>
         <ul>
           <li>«Современные технологии психотерапии и консультирования в стратегии личностного роста». Год: 2012. Часы: 144. Магнитогорский государственный университет, факультет психологии; Челябинская государственная медицинская академия.</li>
-          <li>«Психотерапия, практическая психология и инновационные технологии в реабилитационных программах при зависимостях». Год: 2013. Часы: 96. Евразийская профессиональная ассоциация аддиктивной медицины; Южно-Уральский государственный медицинский университет (ЮУГМУ).</li>
-          <li>Семинар-практикум по использованию проективных карт. Год: 2014. Часы: 16. Институт проективных карт (Institute of Metaphoric Associative Cards).</li>
+          <li>«Психотерапия, практическая психология и инновационные технологии в реабилитационных программах при зависимостях». Год: 2013. Часы: 96. Евразийская профессиональная ассоциация аддиктивной медицины; ЮУГМУ.</li>
+          <li>Семинар-практикум по использованию проективных карт. Год: 2014. Часы: 16. Институт проективных карт.</li>
           <li>«Интегративные технологии в психологии». Год: 2015. Часы: 27. Центр практической психологии образования.</li>
           <li>«Холотропное дыхание: практика применения». Год: 2015. Часы: 12. Центр практической психологии образования.</li>
-          <li>Профессиональный тренинг «Инсайт» (базовый модуль по интегративной психологии). Год: —. Часы: 74. Международная Академия Психологических наук; Международный Институт Интегративной Психологии Профессионального Развития.</li>
+          <li>Профессиональный тренинг «Инсайт». Часы: 74. Международная Академия Психологических наук.</li>
         </ul>
-
         <div class="edu-sub">Детская и подростковая психология</div>
         <ul>
-          <li>«Оказание комплексной психолого-педагогической и медико-социальной помощи несовершеннолетним». Год: 2012. Часы: 72. Московский городской психолого-педагогический университет.</li>
-          <li>«Педагогические условия включения детей с ограниченными возможностями здоровья и детей-инвалидов в программы дополнительного образования». Год: 2015. Часы: 72. Московский городской психолого-педагогический университет.</li>
-          <li>«Организация инклюзивного образования детей-инвалидов, детей с ОВЗ в общеобразовательных организациях». Год: 2015. Часы: 72. Московский городской психолого-педагогический университет.</li>
-          <li>«Профессиональная ориентация старшеклассников в современных социально-экономических условиях». Год: 2016. Часы: —. Санкт-Петербургский государственный экономический университет (СПбГЭУ).</li>
-          <li>«Жизнь без страха. Особенности консультирования и реабилитации пострадавших с использованием реальных историй успеха». Год: 2017. Часы: —. Кризисный центр для женщин и детей «Екатерина», г. Екатеринбург.</li>
+          <li>«Оказание комплексной психолого-педагогической и медико-социальной помощи несовершеннолетним». Год: 2012. Часы: 72. МГППУ.</li>
+          <li>«Педагогические условия включения детей с ОВЗ и детей-инвалидов в программы дополнительного образования». Год: 2015. Часы: 72. МГППУ.</li>
+          <li>«Организация инклюзивного образования детей-инвалидов, детей с ОВЗ в общеобразовательных организациях». Год: 2015. Часы: 72. МГППУ.</li>
+          <li>«Профессиональная ориентация старшеклассников в современных социально-экономических условиях». Год: 2016. СПбГЭУ.</li>
+          <li>«Жизнь без страха». Год: 2017. Кризисный центр для женщин и детей «Екатерина», Екатеринбург.</li>
         </ul>
-
         <div class="edu-sub">Медиация</div>
         <ul>
-          <li>«Практическая конфликтология. Медиативная компетентность в управлении конфликтной ситуацией». Год: 2013. Часы: 72. Челябинское региональное отделение Профессиональной психотерапевтической лиги.</li>
-          <li>«Сертифицированный Ко-медиатор» (Немецкая школа коучинга и медиации). Год: 2013. Часы: 72. Немецкая школа коучинга и медиации, г. Санкт-Петербург.</li>
+          <li>«Практическая конфликтология. Медиативная компетентность в управлении конфликтной ситуацией». Год: 2013. Часы: 72. Челябинское отделение ППЛ.</li>
+          <li>«Сертифицированный Ко-медиатор». Год: 2013. Часы: 72. Немецкая школа коучинга и медиации, СПб.</li>
           <li>«Гражданско-правовые аспекты медиации». Год: 2014. Часы: 18. Центр «HAPPY».</li>
-          <li>«Медиация (посредничество). Базовый курс». Год: 2015. Часы: 120. ЧОУ ДПО «ЦНТИ «Прогресс», г. Санкт-Петербург.</li>
+          <li>«Медиация (посредничество). Базовый курс». Год: 2015. Часы: 120. ЧОУ ДПО «ЦНТИ «Прогресс», СПб.</li>
         </ul>
-
       </div>
     </details>
 
@@ -910,15 +429,15 @@
       <summary>Благодарности и достижения</summary>
       <div class="edu-content">
         <ul>
-          <li>Свидетельство участника Всероссийского психологического форума «Обучение. Воспитание. Развитие — 2012». Год: 2012. Город: Сочи. Федерация психологов образования России.</li>
-          <li>Сертификат участника IV Межрегиональной конференции «Психотерапия, практическая психология и инновационные технологии». Год: 2014. Город: Магнитогорск. Евразийская профессиональная ассоциация аддиктивной медицины; ЮУГМУ.</li>
-          <li>Свидетельство участника X Всероссийской научно-практической конференции «Психология образования: Модернизация системы образования в условиях введения в действие профессиональных стандартов». Год: 2014. Город: Москва. Федерация психологов образования России; Московский городской психолого-педагогический университет.</li>
-          <li>Сертификат участника Всероссийской научно-практической конференции «Организация и содержание обучения детей со сложной структурой дефекта». Год: 2014. Город: Москва. Федеральный институт развития образования (ФИРО).</li>
-          <li>Благодарность Челябинского отделения ППЛ «За активное участие в развитии медиации». Год: 2014. Челябинское региональное отделение Профессиональной психотерапевтической лиги.</li>
-          <li>Грамота Федерации психологов образования России «За активную работу в региональном отделении Южного Урала, инициативность и нестандартные решения». Год: 2014.</li>
-          <li>Диплом победителя областного конкурса профессионального мастерства «Педагог-психолог Челябинской области — 2016». Год: 2016. Министерство образования и науки Челябинской области.</li>
-          <li>Благодарность Министерства образования и науки Челябинской области «За вклад в развитие образования детей-инвалидов и детей с ОВЗ». Год: 2016.</li>
-          <li>Благодарственное письмо Уполномоченного по правам человека в Челябинской области «За эффективное применение социально-значимых психолого-педагогических технологий в работе с несовершеннолетними с девиантным (социально-опасным) поведением». Год: 2016.</li>
+          <li>Свидетельство участника Всероссийского психологического форума «Обучение. Воспитание. Развитие — 2012». Сочи. 2012.</li>
+          <li>Сертификат участника IV Межрегиональной конференции «Психотерапия, практическая психология и инновационные технологии». Магнитогорск. 2014.</li>
+          <li>Свидетельство участника X Всероссийской научно-практической конференции «Психология образования». Москва. 2014.</li>
+          <li>Сертификат участника Всероссийской научно-практической конференции «Организация и содержание обучения детей со сложной структурой дефекта». Москва. 2014.</li>
+          <li>Благодарность Челябинского отделения ППЛ «За активное участие в развитии медиации». 2014.</li>
+          <li>Грамота Федерации психологов образования России «За активную работу». 2014.</li>
+          <li>Диплом победителя областного конкурса «Педагог-психолог Челябинской области — 2016».</li>
+          <li>Благодарность Министерства образования и науки Челябинской области «За вклад в развитие образования детей-инвалидов и детей с ОВЗ». 2016.</li>
+          <li>Благодарственное письмо Уполномоченного по правам человека в Челябинской области. 2016.</li>
         </ul>
       </div>
     </details>
@@ -982,16 +501,37 @@
         </div>
       </div>
     </details>
-
   </div>
 </section>
 
-<!-- Контакты -->
+<!-- Контакты + форма -->
 <section id="contact" class="cta">
   <div class="container">
     <h2>Запись на консультацию</h2>
-    <p>Напишите мне, и мы подберём удобное время</p>
-    <a href="mailto:ваш@email.ru" class="btn">Написать мне</a>
+    <p>Оставьте заявку — я свяжусь с вами и мы подберём удобное время</p>
+
+    <form class="contact-form" onsubmit="return handleFormSubmit(event)">
+      <label for="name">Ваше имя</label>
+      <input type="text" id="name" name="name" required placeholder="Как к вам обращаться">
+
+      <label for="contact">Телефон или Telegram</label>
+      <input type="text" id="contact" name="contact" required placeholder="+7... или @username">
+
+      <label for="message">Что вас беспокоит? (необязательно)</label>
+      <textarea id="message" name="message" placeholder="Пара слов о запросе — по желанию"></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" name="consent" required>
+        <span>Я согласен(а) на обработку персональных данных</span>
+      </label>
+
+      <button type="submit" class="btn">Отправить заявку</button>
+    </form>
+
+    <div class="form-success">
+      Спасибо! Я получил вашу заявку и свяжусь с вами в ближайшее время.
+    </div>
+
     <div class="cta-note">Очно в Челябинске и онлайн</div>
     <div class="cta-contacts">
       <a href="https://t.me/kulkov_km" target="_blank">Telegram: @kulkov_km</a>
@@ -1003,7 +543,7 @@
 
 <footer>
   <div class="container">
-    © 2026 Константин Михайлович Кульков · Психолог, Гештальт-терапевт<br>
+    © 2025 Константин Михайлович Кульков · Психолог, Гештальт-терапевт<br>
     <a href="https://t.me/kulkov_blog" target="_blank">t.me/kulkov_blog</a>
   </div>
 </footer>
@@ -1017,20 +557,21 @@
     <a href="#format">Формат</a>
     <a href="#career">Карьера</a>
     <a href="#services">Темы</a>
-    <a href="#blog">Заметки</a>
+    <a href="#blog">Блог</a>
+    <a href="#faq">Вопросы</a>
     <a href="#education">Образование</a>
     <a href="#contact">Контакты</a>
   </div>
-  <button class="float-nav-toggle" aria-label="Меню навигации" onclick="document.getElementById('floatNav').classList.toggle('open')">+</button>
+  <button class="float-nav-toggle" aria-label="Меню навигации">+</button>
 </div>
 
-<script>
-  document.querySelectorAll('.float-nav-menu a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      document.getElementById('floatNav').classList.remove('open');
-    });
-  });
-</script>
+<!-- Cookies -->
+<div class="cookie-banner hidden" id="cookieBanner">
+  <div>Мы используем cookies, чтобы сайт работал лучше. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</div>
+  <button onclick="acceptCookies()">Принять</button>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
