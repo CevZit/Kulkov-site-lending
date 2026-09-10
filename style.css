@@ -36,10 +36,7 @@ nav a:hover { color: #8a8a6a; }
   background: linear-gradient(165deg, #efebe3 0%, #f6f3ee 65%);
 }
 .hero-inner {
-  display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;
-}
-@media (min-width: 820px) {
-  .hero-inner { grid-template-columns: 1.15fr 0.85fr; gap: 64px; }
+  max-width: 720px;
 }
 .hero h1 {
   font-size: clamp(38px, 5.5vw, 58px);
@@ -49,7 +46,7 @@ nav a:hover { color: #8a8a6a; }
 .hero h1 em { font-style: italic; color: #8a8a6a; font-weight: 600; }
 .hero p {
   font-size: clamp(18px, 2.1vw, 21px); color: #6a665c;
-  max-width: 560px; margin-bottom: 36px;
+  max-width: 640px; margin-bottom: 36px;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -67,17 +64,6 @@ nav a:hover { color: #8a8a6a; }
   border: 2px solid #8a8a6a; margin-left: 12px;
 }
 .btn-ghost:hover { box-shadow: none; background: #efebe3; }
-.hero-photo {
-  background: #efebe3;
-  border-radius: 24px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 20px;
-  overflow: hidden;
-}
-.hero-photo img {
-  width: 100%; height: auto; display: block;
-  border-radius: 16px;
-}
 
 /* Секции */
 section { padding: 88px 0; }
@@ -110,15 +96,20 @@ h2 {
 }
 .about-photos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 32px;
+}
+@media (max-width: 600px) {
+  .about-photos {
+    grid-template-columns: 1fr;
+  }
 }
 .about-photos div {
   background: #efebe3;
   border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
-  padding: 12px;
+  padding: 10px;
   overflow: hidden;
 }
 .about-photos img {
