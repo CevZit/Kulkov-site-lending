@@ -44,19 +44,33 @@ function handleFormSubmit(event) {
     return false;
   }
 
-  // Событие аналитики: отправка формы
-  if (typeof ym !== 'undefined') {
-    ym(XXXXXX, 'reachGoal', 'form_submit');
-  }
+  var text = '📩 Новая заявка с сайта\n\n' +
+             'Имя: ' + name + '\n' +
+             'Контакт: ' + contact + '\n' +
+             (message ? 'Сообщение: ' + message : 'Сообщение: —');
 
-  // Здесь можно отправить данные на почту или в Telegram через сервис.
-  // Пока показываем сообщение об успехе.
-  form.style.display = 'none';
-  var success = form.parentElement.querySelector('.form-success');
-  if (success) success.style.display = 'block';
+  fetch('https://form-proxy.souldrugplus.workers.dev', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: text })
+  })
+  .then(function(response) { return response.json(); })
+  .then(function(data) {
+    if (data.ok) {
+      if (typeof ym !== 'undefined') {
+        ym(XXXXXX, 'reachGoal', 'form_submit');
+      }
+      form.style.display = 'none';
+      var success = form.parentElement.querySelector('.form-success');
+      if (success) success.style.display = 'block';
+    } else {
+      alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите в Telegram.');
+    }
+  })
+  .catch(function() {
+    alert('Ошибка отправки. Попробуйте ещё раз или напишите в Telegram.');
+  });
 
-  // Локальное сохранение (на случай, если сервер не подключён)
-  console.log('Заявка:', { name: name, contact: contact, message: message });
   return false;
 }
 
