@@ -25,9 +25,7 @@ function acceptCookies() {
   var banner = document.getElementById('cookieBanner');
   if (banner) banner.classList.add('hidden');
   // Событие аналитики
-  if (typeof ym !== 'undefined') {
-    ym(XXXXXX, 'reachGoal', 'cookies_accepted');
-  }
+  // Аналитика отключена — счётчик Метрики не подключён
 }
 
 // Обработка формы
@@ -57,9 +55,7 @@ function handleFormSubmit(event) {
   .then(function(response) { return response.json(); })
   .then(function(data) {
     if (data.ok) {
-      if (typeof ym !== 'undefined') {
-        ym(XXXXXX, 'reachGoal', 'form_submit');
-      }
+      // Аналитика отключена — счётчик Метрики не подключён
       form.style.display = 'none';
       var success = form.parentElement.querySelector('.form-success');
       if (success) success.style.display = 'block';
@@ -75,25 +71,7 @@ function handleFormSubmit(event) {
 }
 
 // События аналитики на клики
-document.addEventListener('DOMContentLoaded', function() {
-  // Клик по кнопке "Записаться"
-  document.querySelectorAll('a[href="#contact"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if (typeof ym !== 'undefined') ym(XXXXXX, 'reachGoal', 'click_zapis');
-    });
-  });
-
-  // Клики по контактам в CTA
-  document.querySelectorAll('.cta-contacts a').forEach(function(el) {
-    el.addEventListener('click', function() {
-      var href = el.getAttribute('href') || '';
-      var goal = 'click_contact';
-      if (href.indexOf('t.me') !== -1) goal = 'click_telegram';
-      if (href.indexOf('mailto') !== -1) goal = 'click_email';
-      if (typeof ym !== 'undefined') ym(XXXXXX, 'reachGoal', goal);
-    });
-  });
-});
+// Аналитика отключена — счётчик Метрики не подключён
 
 // Кнопка "наверх"
 document.addEventListener('DOMContentLoaded', function() {
