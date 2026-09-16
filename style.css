@@ -64,7 +64,21 @@ nav a:hover { color: #8a8a6a; }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(138,138,106,.35); }
 .btn-ghost {
   background: transparent; color: #8a8a6a;
-  border: 2px solid #8a8a6a; margin-left: 12px;
+  border: 2px solid #8a8a6a;
+  margin-left: 12px;
+}
+
+@media (max-width: 700px) {
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .btn-ghost {
+    margin-left: 0;
+    margin-top: 14px;
+  }
 }
 .btn-ghost:hover { box-shadow: none; background: #efebe3; }
 .hero-photo {
