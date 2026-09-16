@@ -492,39 +492,22 @@
   </div>
 </section>
 
-<!-- Контакты + форма -->
+<!-- Контакты -->
 <section id="contact" class="cta">
   <div class="container">
     <h2>Запись на консультацию</h2>
-    <p>Оставьте заявку — я свяжусь с вами и мы подберём удобное время</p>
+    <p>Напишите мне — я отвечу и мы подберём удобное время</p>
 
-    <form class="contact-form" onsubmit="return handleFormSubmit(event)">
-      <label for="name">Ваше имя</label>
-      <input type="text" id="name" name="name" required placeholder="Как к вам обращаться">
-
-      <label for="contact">Телефон или Telegram</label>
-      <input type="text" id="contact" name="contact" required placeholder="+7... или @username">
-
-      <label for="message">Что вас беспокоит? (необязательно)</label>
-      <textarea id="message" name="message" placeholder="Пара слов о запросе — по желанию"></textarea>
-
-      <label class="checkbox">
-        <input type="checkbox" name="consent" required>
-        <span>Я согласен(а) на обработку персональных данных</span>
-      </label>
-
-      <button type="submit" class="btn">Отправить заявку</button>
-    </form>
-
-    <div class="form-success">
-      Спасибо! Я получил вашу заявку и свяжусь с вами в ближайшее время.
+    <div class="cta-buttons">
+      <a href="https://t.me/kulkov_km?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию" class="btn" target="_blank" rel="noopener">
+        Написать в Telegram
+      </a>
+      <a href="https://vk.me/kulkov_km" class="btn btn-ghost" target="_blank" rel="noopener">
+        Написать ВКонтакте
+      </a>
     </div>
 
     <div class="cta-note">Очно в Челябинске и онлайн</div>
-    <div class="cta-contacts">
-      <a href="https://t.me/kulkov_km" target="_blank">Telegram: @kulkov_km</a>
-      <a href="https://t.me/kulkov_blog" target="_blank">Канал: @kulkov_blog</a>
-    </div>
   </div>
 </section>
 
